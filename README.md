@@ -16,3 +16,5 @@ If you want to use this project in the Godot editor follow these steps.
 3) rename folder to artworks
 
 4) Go into sub folders and select all images and put them into the root of the artworks folder and delete empty folder. Repeat for all sub folders.
+
+5) Go into Godot and export the project to your OS and then you can run the app yourself. Here is the doc for exporting: https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html
