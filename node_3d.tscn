@@ -17,7 +17,7 @@ script = ExtResource("1_a202f")
 [node name="ThumbnailLayer" type="Node3D" parent="ArtworkCloud" unique_id=1426550346]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=779248742]
-transform = Transform3D(-0.6520984, 0, 0.7581343, 0, 1, 0, -0.7581343, 0, -0.6520984, 17.571, 30.05, -0.373)
+transform = Transform3D(0.20620403, 0, 0.9785089, 0, 1, 0, -0.9785089, 0, 0.20620403, 78.255745, 36.41353, 30.091537)
 script = ExtResource("3_r3fl7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=941313231]
