@@ -218,7 +218,7 @@ func update_nearby_thumbnails():
 		return
 
 	var camera_pos = camera.global_position
-	var wanted_ids := {}
+	var candidates: Array = []
 
 	for i in range(artworks.size()):
 		var art: Dictionary = artworks[i]
@@ -229,13 +229,26 @@ func update_nearby_thumbnails():
 		)
 
 		var dist := camera_pos.distance_to(pos)
-		if dist <= thumbnail_distance:
-			wanted_ids[i] = true
+		candidates.append({
+			"id": i,
+			"dist": dist
+		})
 
-			if not active_thumbnails.has(i):
-				create_thumbnail(i)
-			else:
-				update_thumbnail_transform(i)
+	candidates.sort_custom(func(a, b): return a["dist"] < b["dist"])
+
+	if candidates.size() > max_thumbnails:
+		candidates = candidates.slice(0, max_thumbnails)
+
+	var wanted_ids := {}
+
+	for candidate in candidates:
+		var idx := int(candidate["id"])
+		wanted_ids[idx] = true
+
+		if not active_thumbnails.has(idx):
+			create_thumbnail(idx)
+		else:
+			update_thumbnail_transform(idx)
 
 	var ids_to_remove := []
 	for idx in active_thumbnails.keys():

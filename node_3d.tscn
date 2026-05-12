@@ -13,6 +13,7 @@ transform = Transform3D(0.9154871, -0.4023473, 2.7346054e-08, -0.32668632, -0.74
 
 [node name="ArtworkCloud" type="Node3D" parent="." unique_id=2101602231]
 script = ExtResource("1_a202f")
+thumbnail_scale = 0.11
 
 [node name="ThumbnailLayer" type="Node3D" parent="ArtworkCloud" unique_id=1426550346]
 
@@ -36,7 +37,7 @@ layout_mode = 2
 [node name="InfoLabel" type="Label" parent="CanvasLayer/InfoPanel/VBoxContainer" unique_id=1459275636]
 layout_mode = 2
 
-[node name="ThumbnailRadiusLabel" type="Label" parent="CanvasLayer/InfoPanel/VBoxContainer" unique_id=281947596]
+[node name="ThumbnailCountLabel" type="Label" parent="CanvasLayer/InfoPanel/VBoxContainer" unique_id=281947596]
 layout_mode = 2
 
 [node name="ThumbnailSlider" type="HSlider" parent="CanvasLayer/InfoPanel/VBoxContainer" unique_id=422119802]
