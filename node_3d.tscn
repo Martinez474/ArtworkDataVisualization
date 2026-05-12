@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cf3vrlaady6uv"]
+
+[ext_resource type="Script" uid="uid://xoek1cqww33n" path="res://node_3d.gd" id="1_a0tk4"]
+[ext_resource type="Script" uid="uid://bmnwer1ks3rws" path="res://ArtworkCloud.gd" id="1_a202f"]
+[ext_resource type="Script" uid="uid://dxu2u5xowvhfx" path="res://info_panel.gd" id="2_noarx"]
+[ext_resource type="Script" uid="uid://cg275wogoib8x" path="res://camera_movement.gd" id="3_r3fl7"]
+
+[node name="World" type="Node3D" unique_id=1144480472]
+script = ExtResource("1_a0tk4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1346679351]
+transform = Transform3D(0.9154871, -0.4023473, 2.7346054e-08, -0.32668632, -0.7433308, 0.5837255, -0.23486036, -0.53439325, -0.81195104, -31.80162, 27.807583, 20.17643)
+
+[node name="ArtworkCloud" type="Node3D" parent="." unique_id=2101602231]
+script = ExtResource("1_a202f")
+
+[node name="ThumbnailLayer" type="Node3D" parent="ArtworkCloud" unique_id=1426550346]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=779248742]
+transform = Transform3D(-0.6520984, 0, 0.7581343, 0, 1, 0, -0.7581343, 0, -0.6520984, 17.571, 30.05, -0.373)
+script = ExtResource("3_r3fl7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=941313231]
+
+[node name="InfoPanel" type="PanelContainer" parent="CanvasLayer" unique_id=388787358]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_noarx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/InfoPanel" unique_id=1051102000]
+layout_mode = 2
+
+[node name="PreviewImage" type="TextureRect" parent="CanvasLayer/InfoPanel/VBoxContainer" unique_id=968479565]
+layout_mode = 2
+
+[node name="InfoLabel" type="Label" parent="CanvasLayer/InfoPanel/VBoxContainer" unique_id=1459275636]
+layout_mode = 2
+
+[node name="ThumbnailRadiusLabel" type="Label" parent="CanvasLayer/InfoPanel/VBoxContainer" unique_id=281947596]
+layout_mode = 2
+
+[node name="ThumbnailSlider" type="HSlider" parent="CanvasLayer/InfoPanel/VBoxContainer" unique_id=422119802]
+layout_mode = 2
