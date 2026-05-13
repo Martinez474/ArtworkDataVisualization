@@ -6,6 +6,10 @@ Video Demo
 https://github.com/user-attachments/assets/f37eccf6-cbbd-46e7-8166-797643341f5a
 
 
+For the overall project first use the jupyter notebook file 'ArtworkVisualization_Final.ipynb'. For our team we ran it in Google Collab.
+
+Unfortunately due to file size limits the build cannot be included here on Github but if you follow these steps
+you can also have the build.
 
 If you want to use this project in the Godot editor follow these steps.
 
